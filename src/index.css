@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary-blue: #1458F5;
+    --deep-sbi-blue: #082B78;
+    --secondary-blue: #3679FF;
+    --pale-blue: #EDF5FF;
+    --light-bg: #F5F8FF;
+    --card-white: #FFFFFF;
+    --main-text: #102451;
+    --secondary-text: #64748B;
+    --border-blue: #DCE8FA;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #102451;
+    background-color: #F5F8FF;
+  }
+
+  .font-mono, .tabular-nums {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Accessibility root scale modifications */
+.text-size-normal {
+  font-size: 100%;
+}
+.text-size-large {
+  font-size: 112.5%;
+}
+.text-size-larger {
+  font-size: 125%;
+}
+
+/* High Contrast Mode */
+.high-contrast {
+  --primary-blue: #0033CC;
+  --deep-sbi-blue: #001A66;
+  --secondary-blue: #0044FF;
+  --pale-blue: #D6E7FF;
+  --light-bg: #FFFFFF;
+  --card-white: #FFFFFF;
+  --main-text: #000000;
+  --secondary-text: #1A1A1A;
+  --border-blue: #000000;
+}
+
+.high-contrast body,
+.high-contrast {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+
+.high-contrast .border-slate-100,
+.high-contrast .border-slate-200,
+.high-contrast .border-blue-100,
+.high-contrast .border-[#DCE8FA] {
+  border-color: #000000 !important;
+  border-width: 1.5px !important;
+}
+
+.high-contrast .bg-white {
+  background-color: #FFFFFF !important;
+  box-shadow: 0 0 0 1px #000000 !important;
+}
+
+.high-contrast button,
+.high-contrast a,
+.high-contrast input,
+.high-contrast select {
+  outline-color: #000000 !important;
+}
+
+/* Reduced Motion Mode */
+.reduced-motion *,
+.reduced-motion *::before,
+.reduced-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F8FF;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}

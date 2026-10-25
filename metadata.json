@@ -1,0 +1,6 @@
+{
+  "name": "SBI NETRA — Accessible Digital Banking",
+  "description": "An accessible digital banking prototype inspired by State Bank of India with voice-first assistance, intuitive accounts management, instant transfers, and bill payments.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
